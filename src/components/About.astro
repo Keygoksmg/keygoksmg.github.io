@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+// import me from '../assets/IMG_2791.HEIC';
+import me from '../assets/IMG_4315.PNG';
+// import me from '../assets/IMG_0989.jpg';
+// import { Icon } from 'astro-icon/components';
+
+---
+
+<div id="about">
+	<h1>Keigo Kusumegi</h1>
+	<div class="container">
+		<div class="profile">
+			<Image src={me} alt="Keigo Kusumegi" class="profile-image" />
+			<ul class="links">
+				<li class="highlight"><span><a href="https://scholar.google.com/citations?user=m8nlOKIAAAAJ">Google Scholar</a></span></li>
+				<li class="highlight"><span><a href="/CV_kusumegi.pdf">CV (updated Jan. 2025)</a></span></li>
+			</ul>
+		</div>
+		<div class="bio">
+			<p>
+				I'm Keigo, a Ph.D. student in Information Science at Cornell University advised by <a href="https://www.yianyin.net/">Yian Yin</a>.
+				My research focuses on understanding collective behavior and the interactions between individuals and society that drive innovation and success. 
+				To explore these topics, I apply methods from Network Science, the Science of Science, and Computational Social Science.
+				Currently, I am working on projects that examine team science in interdisciplinary collaborations and the impact of large language models on scientific progress and innovation.
+			</p>
+			<p>
+				I previsouly earned a B.S. and M.S. in Policy and Planning Sciences from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a>, Japan.
+			</p>
+		</div>
+	</div>	
+</div>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: row; /* Default to horizontal layout */
+		flex-wrap: wrap; /* Allow wrapping on smaller screens */
+		justify-content: space-between;
+	}
+
+	.profile {
+		flex: 1; /* Allow the profile to take up proportional space */
+	}
+	.profile-image {
+		width: 200px; /* Fixed width for normal screens */
+		height: auto;
+		max-width: 100%; /* Make the image responsive on smaller screens */
+	}
+
+	.bio {
+		flex: 2; /* Make bio larger than the profile if needed */
+
+	}
+
+	/* remove . from list */
+	ul {
+		padding-left:0;
+	}
+
+	li {
+		list-style:none;
+	}
+
+
+	/* Media query for smaller screens */
+	@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+		.container {
+			flex-direction: column; /* Switch to horizontal layout */
+			align-items: flex-start; /* Align items at the top */
+		}
+	}
+
+</style>

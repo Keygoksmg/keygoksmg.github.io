@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Scientific productivity and practice in the era of Large Language Models",
+        "venue": "(Submitted to Science)",
+        "authors": [
+            {
+                "name": "Keigo Kusumegi",
+                "is_bold": true,
+                "is_equal_contributor": true
+            },
+            {
+                "name": "Xinyu Yang",
+                "is_equal_contributor": true
+            },
+            {
+                "name": "Paul Ginsparg"
+            },
+            {
+                "name": "Mathijs de Vaan"
+            },
+            {
+                "name": "Toby Stuart"
+            },
+            {
+                "name": "Yian Yin"
+            }
+        ]
+    },
+    {
+        "title": "Understanding interdisciplinarity in science and technology",
+        "venue": "(Working paper)",
+        "authors": [
+            {
+                "name": "Keigo Kusumegi",
+                "is_bold": true
+            },
+            {
+                "name": "Yian Yin"
+            }
+        ]
+    },
+    {
+        "title": "Dataset of identified scholars mentioned in acknowledgement statements",
+        "year": "2022",
+        "venue": "Scientific Data",
+        "link": "https://www.nature.com/articles/s41597-022-01585-y",
+        "authors": [
+            {
+                "name": "Keigo Kusumegi",
+                "is_bold": true
+            },
+            {
+                "name": "Yukie Sano"
+            }
+        ]
+    },
+    {
+        "title": "Citations and Gender Diversity in Reciprocal Acknowledgement Networks",
+        "year": "2022",
+        "venue": "arXiv",
+        "link": "https://arxiv.org/pdf/2104.01729",
+        "authors": [
+            {
+                "name": "Keigo Kusumegi",
+                "is_bold": true
+            },
+            {
+                "name": "Yukie Sano"
+            }
+        ]
+    }
+]

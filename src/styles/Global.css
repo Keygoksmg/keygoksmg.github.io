@@ -1,0 +1,75 @@
+:root {
+    /* Colors */
+    --default: #0c1425;
+    --primary: #14213d;
+    --secondary: #f87060;
+    /* highlighting color for links (<a>) */
+    --highlight: #f15501;
+    --highlight-background: #f1550121;
+
+    /* Fonts */
+    --font-family: 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-variant: small-caps;
+    color: var(--primary);
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .015em;
+}
+
+h3 {
+    font-variant: small-caps;
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin: 0;
+    letter-spacing: .1em;
+    font-weight: 900;
+}
+
+h4 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 300;
+}
+
+h5 {
+    color: var(--primary);
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: 300;
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8; 
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+span {
+    font-size: 1.1rem;
+    line-height: 1.5; 
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--highlight);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    background-color: var(--highlight-background); /* Highlight effect (like a marker) */
+    border-radius: 4px; /* Optional: Add rounded corners to the highlight */
+    padding: 0 2px; /* Optional: Add some padding for the highlight effect */
+}

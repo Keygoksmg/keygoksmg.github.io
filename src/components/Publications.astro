@@ -1,0 +1,76 @@
+---
+import publications from '../data/publications.json';
+
+function formatAuthor(author) {
+  let formattedName = author.name;
+
+  if (author.is_bold) {
+    formattedName = `<strong>${formattedName}</strong>`;
+  }
+
+  if (author.is_equal_contributor) {
+    formattedName += '<sup>+</sup>';
+  }
+
+  if (author.is_pi) {
+    formattedName += '<sup>*</sup>';
+  }
+
+  return formattedName;
+}
+
+function formatAuthors(authors) {
+  const formattedAuthors = authors.map(formatAuthor);
+
+  if (formattedAuthors.length === 2) {
+    return formattedAuthors.join(' and ');
+  } else {
+    return formattedAuthors.join(', ');
+  }
+}
+---
+
+<div id="publication-container">
+	<h3> Publications </h3>
+  <!-- <h3> Publications </h3> -->
+		<div class="publication-contents">
+      <ul>
+        {publications.map((publication) => (
+          <li>
+            <span class="title"><i>{publication.title}</i></span> <br />
+            <span set:html={formatAuthors(publication.authors)}></span> <br />
+            <span><i>{publication.venue && (publication.venue)}</i> {publication.year && "("+publication.year+")"}</span>
+            {publication.link && (
+                <span><a href={publication.link} target="_blank" rel="noopener noreferrer">PDF</a></span>
+            )}
+          </li>
+        ))}
+      </ul>
+      <span class="caption"><i>+ denotes equal contribution</i></span>
+	</div>	
+</div>
+
+<style>
+  .title {
+    /* text color */
+    color: var(--primary);
+  }
+  /* make some space betweeen list items */
+  li {
+    list-style:none;
+    margin-bottom: 20px;
+    line-height: 0cap;
+  }
+
+  ul {
+    padding-left:0;
+  }
+
+  .pubttle {
+    ponto
+  }
+
+  .caption {
+    font-size: 0.6rem;
+  }
+</style>

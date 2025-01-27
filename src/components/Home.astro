@@ -1,0 +1,153 @@
+<!-- ---
+import { Image } from 'astro:assets';
+import me from '../assets/IMG_4315.PNG';
+---
+
+<div id="container">
+	<h1> About </h1>
+	<div class="profiles">
+		<div class="name">
+			<Image 
+				src={me} 
+				alt="Keigo Kusumegi" 
+				style="width: 200px; height: auto;"/>
+		</div>
+		<div class="info">
+			<p>Keigo Kusumegi</p>
+			<p>PhD Student @ Cornell Information Science</p>
+			<p>Science of Science, Computational Social Science & Network Science</p>
+			<p>kk929 [at] cornell.edu | Google Scholar | CV</p>
+		</div>
+	</div>
+	<div class="bio">
+		<p>
+			I am a PhD student at Cornell Information Science, where I am advised by Dr. Yian Yin. 
+			Previously, BS and MSs in Policy and Planning Sciences at University of Tsukuba, Japan.
+			My research interests include Network Science, Science of Science, and Computational Social Science.
+		</p>
+	</div>
+</div>
+
+<style>
+	#container {
+		/* height: 100%; */
+		/* display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 16px;
+		text-align: center; */
+	}
+
+	.profiles {
+		display: flex;
+		flex-direction: row;
+		/* align-items: center;　*/
+		/* justify-content: center;  */
+		justify-content:space-between;
+		/* margin: 20px; */
+		text-align: center;
+	}
+	.info {
+		margin: 20px;
+		/* 左寄り */
+		text-align: left;
+	}
+
+	.bio {
+		font-size: 16px;
+		line-height: 1.6;
+		color: var(--text-color);
+		/* margin: 16px 0; */
+	}
+
+
+	@media (max-width: 768px) {
+		#container {
+			padding: 8px;
+		}
+
+		main {
+			padding: 16px;
+		}
+
+		h1 {
+			font-size: 24px;
+		}
+
+		.publications h2 {
+			font-size: 20px;
+		}
+	}
+</style> -->
+
+
+
+
+
+---
+import { Image } from 'astro:assets';
+import me from '../assets/IMG_4315.PNG';
+---
+
+<div id="about-container">
+	<h1> Profile </h1>
+	<div class="about-content">
+		<Image 
+			src={me} 
+			alt="Keigo Kusumegi" 
+			style="width: 200px; height: auto;"/>
+		<div class="bio">
+			<!-- <h1> Profile </h1> -->
+			<p>
+				I am a PhD student at Cornell Information Science since 2023.
+				I am advised by Dr. Yian Yin, and currently studing team science in interdisciplinary collaborations.
+				Broadly my research interests include Network Science, Science of Science, and Computational Social Science.
+				Previously, BS and MSs in Policy and Planning Sciences at University of Tsukuba, Japan.
+			</p>
+
+			<ul>
+				<li>Curriculum Vitae (updated at 2024.09)</li>
+				<li>Google Scholar</li>
+				<li>Computational Social Science</li>
+			</ul>
+		</div>
+	</div>	
+</div>
+
+<style>
+	.about-content {
+		display: flex;
+		flex-direction: row;
+		/* align-items: center; */
+		/* justify-content: center;  */
+		justify-content: space-between;
+		/* margin: 20px; */
+		text-align: center;
+	}
+
+	.bio {
+		margin: 0 0 0 50px;
+		/* 左寄り */
+		text-align: left;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.6;
+		color: var(--text-color);
+	}
+
+	/* make horizontal line under the h1 */
+	h1 {
+		display: inline-block;
+		border-bottom: 1px solid #d0cccc;
+		padding-bottom: 10px;
+	}
+
+	/* make horizontal line next to h1 */
+	/* h1 {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	} */
+</style>
