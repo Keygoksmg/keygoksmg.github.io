@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     // github pages
     site: 'https://keygoksmg.github.io/',
-    base: '/keygoksmg.github.io',
+    // base: '/keygoksmg.github.io',
 
     // partytown settings
     integrations: [partytown({ config: { forward: ["dataLayer.push"] } })],
