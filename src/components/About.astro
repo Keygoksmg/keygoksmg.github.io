@@ -3,8 +3,8 @@ import { Image } from 'astro:assets';
 // import me from '../assets/IMG_2791.HEIC';
 import me from '../assets/IMG_4315.PNG';
 // import me from '../assets/IMG_0989.jpg';
-// import { Icon } from 'astro-icon/components';
 
+import { Icon } from 'astro-icon/components';
 ---
 
 <div id="about">
@@ -14,8 +14,13 @@ import me from '../assets/IMG_4315.PNG';
 			<Image src={me} alt="Keigo Kusumegi" class="profile-image" />
 			<ul class="links">
 				<li class="highlight"><span><a href="https://scholar.google.com/citations?user=m8nlOKIAAAAJ">Google Scholar</a></span></li>
-				<li class="highlight"><span><a href="/CV_kusumegi.pdf">CV (updated Jan. 2025)</a></span></li>
+				<li class="highlight"><span><a href="/CV.pdf">CV (updated Jan. 2025)</a></span></li>
 			</ul>
+			<div class="icons">
+				<a href="https://www.linkedin.com/in/keigo-kusumegi-b6127a205/"><Icon name="linkedin-logo" /></a>
+				<a href="https://github.com/Keygoksmg?tab=repositories"><Icon name="github-logo" /></a>
+				<a href="https://bsky.app/profile/keigoksmg.bsky.social"><Icon name="bluesky" /></a>
+			</div>
 		</div>
 		<div class="bio">
 			<p>
@@ -25,7 +30,7 @@ import me from '../assets/IMG_4315.PNG';
 				Currently, I am working on projects that examine team science in interdisciplinary collaborations and the impact of Large Language Models on scientific progress and innovation.
 			</p>
 			<p>
-				I previsouly earned a B.S. and M.S. in Policy and Planning Sciences from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a>, Japan.
+				I previsouly studied at the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a>, Japan.
 			</p>
 		</div>
 	</div>	
@@ -62,6 +67,17 @@ import me from '../assets/IMG_4315.PNG';
 		list-style:none;
 	}
 
+
+	[data-icon] {
+		font-size: 1.2rem;
+		color: var(--highlight);
+	}
+	.icons {
+		display: flex;
+		justify-content: left;
+		/* make gaps between elements */
+		gap: 16px;
+	}
 
 	/* Media query for smaller screens */
 	@media (max-width: 768px) { /* Adjust the breakpoint as needed */

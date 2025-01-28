@@ -13,16 +13,19 @@ import Footer from '../components/Footer.astro';
 		<title>Keigo Kusumegi</title>
 	</head>
 	<!-- Google tag (gtag.js) -->
-	<scriptasync src="https://www.googletagmanager.com/gtag/js?id=G-3X2SW2255R"></script>
-	<script>
+	<script
+		type="text/partytown"
+		src="https://www.googletagmanager.com/gtag/js?id=G-3X2SW2255R">
+	</script>
+	<script type="text/partytown">
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
-			dataLayer.push(arguments);
+		dataLayer.push(arguments);
 		}
 		gtag("js", new Date());
-
 		gtag("config", "G-3X2SW2255R");
 	</script>
+  
 	<!-- End of Google tag -->
 	<body>
 		<!-- <img id="background" src={background.src} alt="Background Image" fetchpriority="high" /> -->

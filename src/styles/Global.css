@@ -71,5 +71,5 @@ a {
 a:hover {
     background-color: var(--highlight-background); /* Highlight effect (like a marker) */
     border-radius: 4px; /* Optional: Add rounded corners to the highlight */
-    padding: 0 2px; /* Optional: Add some padding for the highlight effect */
+    padding-top: 2px; /* Optional: Add some padding for the highlight effect */
 }
