@@ -53,14 +53,18 @@ import Footer from '../components/Footer.astro';
 		font-size: var(--base-font-size);
 		background-color: #f9f9f9;
 		line-height: 1.6; /* Adjust for better readability */
+		/* overflow-x: hidden; */
 	}
 
 	main {
 		width: 100%;
 		/* max-width: 768px; */
 		margin: auto;
+		/* when window is small, at least ther is 16px on the both side margin */
+		/* margin: 0 16px; */
 		max-width: 960px;
 		padding: 16px;
+		box-sizing: border-box; /* これを追記 */
 	}
 
 </style>
