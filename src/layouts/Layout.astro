@@ -13,28 +13,24 @@ import Footer from '../components/Footer.astro';
 		<title>Keigo Kusumegi</title>
 	</head>
 	<!-- Google tag (gtag.js) -->
-	<script
-		is:inline
-		type="text/partytown"
-		src="https://www.googletagmanager.com/gtag/js?id=G-3X2SW2255R"
-	></script>
-	<script is:inline type="text/partytown">
+	<scriptasync src="https://www.googletagmanager.com/gtag/js?id=G-3X2SW2255R"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
-		dataLayer.push(arguments);
+			dataLayer.push(arguments);
 		}
 		gtag("js", new Date());
-	
-		gtag('config', 'G-3X2SW2255R');
+
+		gtag("config", "G-3X2SW2255R");
 	</script>
 	<!-- End of Google tag -->
 	<body>
 		<!-- <img id="background" src={background.src} alt="Background Image" fetchpriority="high" /> -->
+		<!-- <Header /> -->
 		<main>
-			<!-- <Header /> -->
 			<slot />
-			<Footer />
 		</main>
+		<Footer />
 	</body>
 </html>
 
@@ -44,27 +40,30 @@ import Footer from '../components/Footer.astro';
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		/* height: 100%; */
-		height: auto;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		flex: 1;
 		font-family: var(--font-family);
 		font-size: var(--base-font-size);
 		background-color: #f9f9f9;
 		line-height: 1.6; /* Adjust for better readability */
-		/* overflow-x: hidden; */
 	}
 
 	main {
 		width: 100%;
-		/* max-width: 768px; */
+		min-height: 95vh;
 		margin: auto;
 		/* when window is small, at least ther is 16px on the both side margin */
-		/* margin: 0 16px; */
 		max-width: 960px;
 		padding: 16px;
 		box-sizing: border-box; /* これを追記 */
+	}
+
+	footer {
+		margin-top: auto;
+		width: 100%;
 	}
 
 </style>

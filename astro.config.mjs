@@ -1,5 +1,4 @@
 // @ts-check
-import partytown from '@astrojs/partytown';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
@@ -9,5 +8,5 @@ export default defineConfig({
     // base: '/keygoksmg.github.io',
 
     // partytown settings
-    integrations: [partytown({ config: { forward: ["dataLayer.push"] } })],
+    integrations: [], // partytown({ config: { forward: ["dataLayer.push"] } })
   });
