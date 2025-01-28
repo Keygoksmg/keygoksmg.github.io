@@ -4,8 +4,10 @@
     --primary: #14213d;
     --secondary: #f87060;
     /* highlighting color for links (<a>) */
-    --highlight: #f15501;
-    --highlight-background: #f1550121;
+    /* --highlight: #009a27; 
+    --highlight-background: #008b4533; */
+    --highlight: #f15501; 
+    --highlight-background: #f155010f;
 
     /* Fonts */
     --font-family: 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
