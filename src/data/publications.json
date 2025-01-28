@@ -5,7 +5,7 @@
         "authors": [
             {
                 "name": "Keigo Kusumegi",
-                "is_bold": true,
+                "is_me": true,
                 "is_equal_contributor": true
             },
             {
@@ -32,7 +32,7 @@
         "authors": [
             {
                 "name": "Keigo Kusumegi",
-                "is_bold": true
+                "is_me": true
             },
             {
                 "name": "Yian Yin"
@@ -47,7 +47,7 @@
         "authors": [
             {
                 "name": "Keigo Kusumegi",
-                "is_bold": true
+                "is_me": true
             },
             {
                 "name": "Yukie Sano"
@@ -62,7 +62,7 @@
         "authors": [
             {
                 "name": "Keigo Kusumegi",
-                "is_bold": true
+                "is_me": true
             },
             {
                 "name": "Yukie Sano"

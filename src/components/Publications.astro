@@ -4,8 +4,9 @@ import publications from '../data/publications.json';
 function formatAuthor(author) {
   let formattedName = author.name;
 
-  if (author.is_bold) {
-    formattedName = `<strong>${formattedName}</strong>`;
+  if (author.is_me) {
+    formattedName = `<span>${formattedName}</span>`;
+    // formattedName = `<strong>${formattedName}</strong>`;
   }
 
   if (author.is_equal_contributor) {
@@ -32,7 +33,6 @@ function formatAuthors(authors) {
 
 <div id="publication-container">
 	<h3> Publications </h3>
-  <!-- <h3> Publications </h3> -->
 		<div class="publication-contents">
       <ul>
         {publications.map((publication) => (
@@ -54,6 +54,7 @@ function formatAuthors(authors) {
   .title {
     /* text color */
     color: var(--primary);
+    font-weight: bold;
   }
   /* make some space betweeen list items */
   li {
@@ -64,10 +65,6 @@ function formatAuthors(authors) {
 
   ul {
     padding-left:0;
-  }
-
-  .pubttle {
-    ponto
   }
 
   .caption {
