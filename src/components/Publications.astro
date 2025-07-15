@@ -31,43 +31,175 @@ function formatAuthors(authors) {
 }
 ---
 
-<div id="publication-container">
-	<h3> Publications </h3>
-		<div class="publication-contents">
-      <ul>
-        {publications.map((publication) => (
-          <li>
-            <span class="title"><i>{publication.title}</i></span> <br />
-            <span set:html={formatAuthors(publication.authors)}></span> <br />
-            <span><i>{publication.venue && (publication.venue)}</i> {publication.year && "("+publication.year+")"}</span>
-            {publication.link && (
-                <span><a href={publication.link} target="_blank" rel="noopener noreferrer">PDF</a></span>
-            )}
-          </li>
-        ))}
-      </ul>
-      <span class="caption"><i>+ denotes equal contribution</i></span>
-	</div>	
-</div>
+<section id="publications">
+	<header class="section-header">
+		<h3>Publications</h3>
+	</header>
+	
+	<div class="publications-list">
+		{publications.map((publication, index) => (
+			<article class="publication-item">
+				<div class="publication-content">
+					<h4 class="publication-title">{publication.title}</h4>
+					
+					<div class="publication-authors" set:html={formatAuthors(publication.authors)}></div>
+					
+					<div class="publication-meta">
+						{publication.venue && (
+							<span class="venue">{publication.venue}</span>
+						)}
+						{publication.year && (
+							<span class="year">({publication.year})</span>
+						)}
+					</div>
+					
+					{publication.link && (
+						<div class="publication-actions">
+							<a href={publication.link} target="_blank" rel="noopener noreferrer" class="pdf-link">
+								<span>View PDF</span>
+								<svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+								</svg>
+							</a>
+						</div>
+					)}
+				</div>
+			</article>
+		))}
+	</div>
+	
+	<footer class="publications-footer">
+		<p class="caption">+ denotes equal contribution</p>
+	</footer>
+</section>
 
 <style>
-  .title {
-    /* text color */
-    color: var(--primary);
-    font-weight: bold;
-  }
-  /* make some space betweeen list items */
-  li {
-    list-style:none;
-    margin-bottom: 20px;
-    line-height: 0cap;
-  }
+	#publications {
+		margin-top: var(--space-2xl);
+	}
 
-  ul {
-    padding-left:0;
-  }
+	.section-header {
+		margin-bottom: var(--space-xl);
+		border-bottom: 1px solid var(--border-light);
+		padding-bottom: var(--space-md);
+	}
 
-  .caption {
-    font-size: 0.6rem;
-  }
+	.publications-list {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-xl);
+	}
+
+	.publication-item {
+		padding: var(--space-lg);
+		background-color: var(--background-subtle);
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--border-light);
+		transition: all 0.2s ease;
+	}
+
+	.publication-item:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+		border-color: var(--accent-blue);
+	}
+
+	.publication-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-sm);
+	}
+
+	.publication-title {
+		color: var(--text-primary);
+		font-weight: 600;
+		font-size: 1.125rem;
+		line-height: 1.4;
+		margin: 0;
+		font-style: italic;
+	}
+
+	.publication-authors {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.publication-authors span {
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	.publication-meta {
+		display: flex;
+		align-items: center;
+		gap: var(--space-xs);
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.venue {
+		font-style: italic;
+	}
+
+	.year {
+		font-weight: 500;
+	}
+
+	.publication-actions {
+		margin-top: var(--space-sm);
+	}
+
+	.pdf-link {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-xs);
+		padding: var(--space-xs) var(--space-sm);
+		background-color: var(--accent-blue);
+		color: white;
+		border-radius: var(--radius-sm);
+		font-size: 0.875rem;
+		font-weight: 500;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.pdf-link:hover {
+		background-color: #2563eb;
+		transform: translateY(-1px);
+		box-shadow: var(--shadow-sm);
+		text-decoration: none;
+	}
+
+	.pdf-link svg {
+		flex-shrink: 0;
+	}
+
+	.publications-footer {
+		margin-top: var(--space-lg);
+		padding-top: var(--space-md);
+		border-top: 1px solid var(--border-light);
+	}
+
+	.caption {
+		font-size: 0.75rem;
+		color: var(--text-muted);
+		font-style: italic;
+		margin: 0;
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.publication-item {
+			padding: var(--space-md);
+		}
+
+		.publication-title {
+			font-size: 1rem;
+		}
+
+		.publication-authors {
+			font-size: 0.875rem;
+		}
+	}
 </style>

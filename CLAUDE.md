@@ -46,3 +46,6 @@ All commands should be run from the root directory:
 - Vite polling enabled for hot reload stability
 - TypeScript strict mode enabled
 - Partytown integration for third-party script optimization
+
+## Additional setup
+- After implementation is complete, leave an implementation log in the requirements definition directory _docs/. Save it in the format yyyy-mm-dd_[feature_name].md. Also, read it on startup.

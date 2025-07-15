@@ -2,25 +2,27 @@
 // const hightligh_text_color = '#017e92';
 ---
 
-<div id="footer">
-    <span class="copyright">© 2025 Keigo Kusumegi</p>
-</div>
+<footer id="footer">
+    <div class="footer-content">
+        <p class="copyright">© 2025 Keigo Kusumegi</p>
+    </div>
+</footer>
 
 <style>
     #footer {
-      /* display: flex;
-      justify-content: space-between;
-      */
-      align-items: left;
-      color: var(--text-color);
-      /* border-top: 1px solid #ccc; */
-      /* height: 50px; */
-      /* margin-top: 40px; */
-  }
-  .copyright {
-      color: var(--text-color);
-      font-size: 0.7rem;
-      margin: 10px;
-      opacity: 0.5;
-  }
+        margin-top: var(--space-2xl);
+        padding-top: var(--space-xl);
+        border-top: 1px solid var(--border-light);
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .copyright {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+        margin: 0;
+        opacity: 0.8;
+    }
 </style>

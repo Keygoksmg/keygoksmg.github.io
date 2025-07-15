@@ -49,19 +49,27 @@ import Footer from '../components/Footer.astro';
 		align-items: center;
 		flex: 1;
 		font-family: var(--font-family);
-		font-size: var(--base-font-size);
-		background-color: #f9f9f9;
-		line-height: 1.6; /* Adjust for better readability */
+		font-size: 16px;
+		background-color: var(--background);
+		line-height: 1.6;
+		color: var(--text-primary);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	main {
 		width: 100%;
 		min-height: 95vh;
 		margin: auto;
-		/* when window is small, at least ther is 16px on the both side margin */
-		max-width: 960px;
-		padding: 16px;
-		box-sizing: border-box; /* これを追記 */
+		max-width: 900px;
+		padding: var(--space-xl);
+		box-sizing: border-box;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: var(--space-lg);
+		}
 	}
 
 </style>
