@@ -1,7 +1,7 @@
 [
     {
-        "title": "Scientific productivity and practice in the era of Large Language Models",
-        "venue": "(Under revision)",
+        "title": "Scientific production in the era of large language models",
+        "venue": "Science",
         "authors": [
             {
                 "name": "Keigo Kusumegi",
@@ -16,7 +16,7 @@
                 "name": "Paul Ginsparg"
             },
             {
-                "name": "Mathijs de Vaan"
+                "name": "Mathijs de Vaan" 
             },
             {
                 "name": "Toby Stuart"
